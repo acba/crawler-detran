@@ -6,11 +6,11 @@ def xorThis(string, chave):
     return novaString
 
 
-string = "06529813489"
+string = "97630049124"
 chave  = "12345678910"
 
 a = xorThis(string, chave)
 
-print(a)
-print(xorThis(a, chave))
+print(string, "XORCrypt --> ", a)
+print(a, "XORCrypt --> ", xorThis(a, chave))
 

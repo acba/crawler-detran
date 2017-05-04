@@ -46,16 +46,16 @@ for doc in db.indexaveis.find():
         outNomeFoto = outPath+xorThis(doc["cpf"])+"-F.jpg"
         shutil.copy(nomeFoto, outNomeFoto)
 
-        # print(nomeFoto, " ---> ", outNomeFoto)
+        print(nomeFoto, " ---> ", outNomeFoto)
 
     if isfile(assinaturaFoto):
         outAssinaturaFoto = outPath+xorThis(doc["cpf"])+"-A.jpg"
         shutil.copy(assinaturaFoto, outAssinaturaFoto)
 
-        # print(assinaturaFoto, " ---> ", outAssinaturaFoto)
+        print(assinaturaFoto, " ---> ", outAssinaturaFoto)
 
     if cnt%50 == 0:
-        print(format(cnt/cntTotal, ".4f"), "%")
+        print(format(cnt/cntTotal, ".4f"), "%", cnt)
     cnt +=1
 
 # for doc in db.renach.find({"renach": {"$in": listFileName}}):
